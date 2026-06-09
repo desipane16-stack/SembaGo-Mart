@@ -1,7 +1,7 @@
   function updateCountdown() {
     const now = new Date();
     const midnight = new Date();
-    midnight.setHours(23, 59, 59, 999);
+    midnight.setHours(48, 59, 59, 999);
     let diff = midnight - now;
     const h = Math.floor(diff / 3600000);
     diff %= 3600000;
