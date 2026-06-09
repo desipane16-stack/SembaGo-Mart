@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="google-site-verification" content="rPIhU_tzq9jZYiZyVygyVInBnbq4RukgVCIrJA05Efc" />
+  <link rel="canonical" href="https://sembagomart.vercel.app/">
+  <title>SembaGO Mart – Sembako Murah & Lengkap Sumatera Utara</title>
+  <meta name="description" content="SembaGO Mart – Toko sembako terpercaya di Sumatera Utara. Produk lengkap, harga hemat, gratis ongkir area sekitar, bisa COD. Pesan sekarang via WhatsApp!"/>
+  <meta name="keywords" content="sembako murah, toko sembako sumatera utara, beli sembako online, sembako lengkap, grosir sembako medan, paket sembako bulanan"/>
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <style>
+    :root {
+      --green: #1a8a3c;
+      --green-light: #28b553;
+      --green-dark: #146230;
+      --orange: #f97316;
+      --orange-dark: #ea580c;
+      --yellow: #fbbf24;
+      --red: #ef4444;
+      --cream: #fffbf0;
+      --brown: #7c3f00;
+      --white: #ffffff;
+      --gray: #f4f4f4;
+      --text: #1a1a1a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Nunito', sans-serif; color: var(--text); background: var(--cream); overflow-x: hidden; }
+    h1,h2,h3,.font-display { font-family: 'Baloo 2', cursive; }
+
+    /* ---- TOPBAR ---- */
+    .topbar {
+      background: var(--green-dark);
+      color: #fff;
+      font-size: 0.82rem;
+      padding: 6px 0;
+    }
+    .topbar marquee { display: inline-block; }
+
+    /* ---- NAVBAR ---- */
+    .navbar-brand img { height: 44px; }
+    .navbar { background: var(--green) !important; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+    .navbar-brand { font-family: 'Baloo 2', cursive; font-size: 1.6rem; color: #fff !important; font-weight: 800; letter-spacing: 1px; }
+    .navbar .nav-link { color: rgba(255,255,255,0.9) !important; font-weight: 700; }
+    .navbar .nav-link:hover { color: var(--yellow) !important; }
+    .btn-wa-nav {
+      background: #25d366; color: #fff !important; border-radius: 50px;
+      padding: 6px 18px; font-weight: 800; border: none;
+      transition: background .2s;
+    }
+    .btn-wa-nav:hover { background: #1baa50; }
+
+    /* ---- HERO BANNER ---- */
+    .hero {
+      background: linear-gradient(135deg, #145a28 0%, #1a8a3c 40%, #28b553 100%);
+      min-height: 520px;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='28'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+    .hero-badge {
+      display: inline-block; background: var(--orange); color: #fff;
+      font-size: 0.82rem; font-weight: 800; padding: 4px 14px; border-radius: 50px; margin-bottom: 12px;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
+    .hero h1 { font-size: clamp(2rem,5vw,3.4rem); color: #fff; font-weight: 800; line-height: 1.15; }
+    .hero h1 span { color: var(--yellow); }
+    .hero p { color: rgba(255,255,255,0.88); font-size: 1.1rem; }
+    .hero-img { max-width: 420px; width: 100%; filter: drop-shadow(0 8px 30px rgba(0,0,0,0.3)); }
+    .btn-pesan {
+      background: var(--orange); color: #fff; font-weight: 800; font-size: 1.1rem;
+      border: none; border-radius: 50px; padding: 14px 34px;
+      box-shadow: 0 4px 20px rgba(249,115,22,.45);
+      transition: all .2s; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-pesan:hover { background: var(--orange-dark); transform: translateY(-2px); color: #fff; }
+    .btn-katalog {
+      background: transparent; color: #fff; font-weight: 800; font-size: 1rem;
+      border: 2px solid rgba(255,255,255,0.6); border-radius: 50px; padding: 12px 28px;
+      transition: all .2s;
+    }
+    .btn-katalog:hover { border-color: var(--yellow); color: var(--yellow); }
+
+    /* ---- PROMO TICKER ---- */
+    .promo-ticker {
+      background: var(--orange); color: #fff; padding: 10px 0; font-weight: 800; font-size: 0.95rem;
+      overflow: hidden;
+    }
+    .ticker-content { display: flex; gap: 60px; animation: ticker 20s linear infinite; white-space: nowrap; }
+    @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .ticker-item::before { content: '🔥 '; }
+
+    /* ---- STATS ---- */
+    .stats-row { background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,0.07); }
+    .stat-item { padding: 20px; text-align: center; border-right: 1px solid #eee; }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-family: 'Baloo 2', cursive; font-size: 2rem; font-weight: 800; color: var(--green); }
+    .stat-label { font-size: 0.85rem; color: #666; font-weight: 600; }
+
+    /* ---- SECTION TITLE ---- */
+    .section-title { font-size: clamp(1.5rem,3vw,2.2rem); font-weight: 800; color: var(--green-dark); }
+    .section-subtitle { color: #666; font-size: 1rem; }
+    .badge-section {
+      display: inline-block; background: var(--green); color: #fff;
+      font-size: 0.78rem; font-weight: 800; padding: 3px 12px; border-radius: 50px; margin-bottom: 8px;
+    }
+
+    /* ---- PROMO CARDS ---- */
+    .promo-section { background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); }
+    .promo-card {
+      background: #fff; border-radius: 18px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform .2s, box-shadow .2s;
+      position: relative;
+    }
+    .promo-card:hover { transform: translateY(-5px); box-shadow: 0 10px 35px rgba(0,0,0,0.14); }
+    .promo-badge-card {
+      position: absolute; top: 12px; left: 12px;
+      background: var(--red); color: #fff; font-size: 0.78rem; font-weight: 800;
+      padding: 3px 10px; border-radius: 50px; z-index: 2;
+    }
+    .promo-card img { width: 100%; height: 180px; object-fit: cover; }
+    .promo-card-body { padding: 16px; }
+    .promo-card-name { font-weight: 800; font-size: 1rem; margin-bottom: 4px; }
+    .promo-price-old { text-decoration: line-through; color: #999; font-size: 0.85rem; }
+    .promo-price-new { color: var(--red); font-family: 'Baloo 2', cursive; font-size: 1.4rem; font-weight: 800; }
+    .stok-badge { font-size: 0.78rem; color: var(--orange); font-weight: 700; }
+
+    /* ---- KATALOG ---- */
+    .katalog-section { background: var(--cream); }
+    .filter-btns .btn { border-radius: 50px; font-weight: 700; font-size: 0.88rem; margin: 3px; }
+    .filter-btns .btn.active, .filter-btns .btn:hover { background: var(--green); color: #fff; border-color: var(--green); }
+    .product-card {
+      background: #fff; border-radius: 16px; overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+      transition: transform .2s, box-shadow .2s; position: relative;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.13); }
+    .product-card img { width: 100%; height: 170px; object-fit: cover; }
+    .product-card-body { padding: 14px; }
+    .product-name { font-weight: 800; font-size: 0.95rem; margin-bottom: 4px; }
+    .product-desc { font-size: 0.8rem; color: #777; margin-bottom: 8px; line-height: 1.4; }
+    .product-price { font-family: 'Baloo 2', cursive; font-size: 1.25rem; font-weight: 800; color: var(--green-dark); }
+    .product-unit { font-size: 0.78rem; color: #999; }
+    .label-terlaris {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--yellow); color: var(--brown); font-size: 0.72rem; font-weight: 800;
+      padding: 3px 9px; border-radius: 50px;
+    }
+    .label-baru {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--green); color: #fff; font-size: 0.72rem; font-weight: 800;
+      padding: 3px 9px; border-radius: 50px;
+    }
+    .btn-order-product {
+      width: 100%; background: var(--green); color: #fff; font-weight: 800;
+      border: none; border-radius: 50px; padding: 9px; font-size: 0.88rem;
+      transition: background .2s; margin-top: 10px;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .btn-order-product:hover { background: var(--green-dark); }
+
+    /* ---- PAKET SEMBAKO ---- */
+    .paket-section { background: linear-gradient(135deg, #e8f5e9 0%, #f0fdf4 100%); }
+    .paket-card {
+      background: #fff; border-radius: 20px; overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1); transition: transform .2s;
+      border-top: 5px solid var(--green);
+    }
+    .paket-card.featured { border-top-color: var(--orange); }
+    .paket-card:hover { transform: translateY(-6px); }
+    .paket-header { padding: 20px; text-align: center; }
+    .paket-icon { font-size: 3rem; margin-bottom: 8px; }
+    .paket-name { font-family: 'Baloo 2', cursive; font-size: 1.4rem; font-weight: 800; color: var(--green-dark); }
+    .paket-price { font-family: 'Baloo 2', cursive; font-size: 2rem; font-weight: 800; color: var(--orange); }
+    .paket-isi { padding: 0 20px; }
+    .paket-isi li { padding: 7px 0; border-bottom: 1px dashed #eee; font-size: 0.9rem; font-weight: 600; }
+    .paket-isi li i { color: var(--green); margin-right: 8px; }
+    .paket-footer { padding: 20px; }
+    .badge-hemat {
+      background: #fef3c7; color: #92400e; font-weight: 800;
+      padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; display: inline-block; margin-bottom: 10px;
+    }
+    .popular-badge {
+      background: var(--orange); color: #fff; font-weight: 800;
+      padding: 4px 14px; border-radius: 50px; font-size: 0.78rem; display: inline-block; margin-bottom: 10px;
+    }
+
+    /* ---- KEUNGGULAN ---- */
+    .keunggulan-section { background: var(--white); }
+    .keunggulan-card {
+      background: linear-gradient(135deg, #f0fdf4, #fff);
+      border-radius: 18px; padding: 28px 20px; text-align: center;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.06); border: 1px solid #d1fae5;
+      transition: transform .2s;
+    }
+    .keunggulan-card:hover { transform: translateY(-4px); }
+    .keunggulan-icon { font-size: 2.8rem; margin-bottom: 12px; }
+    .keunggulan-title { font-weight: 800; font-size: 1.05rem; color: var(--green-dark); margin-bottom: 6px; }
+    .keunggulan-desc { font-size: 0.88rem; color: #666; line-height: 1.5; }
+
+    /* ---- TESTIMONI ---- */
+    .testimoni-section { background: linear-gradient(135deg, #1a8a3c, #145a28); }
+    .testi-card {
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(6px);
+      border-radius: 18px; padding: 22px;
+      border: 1px solid rgba(255,255,255,0.2); color: #fff;
+    }
+    .testi-avatar {
+      width: 48px; height: 48px; border-radius: 50%; background: var(--yellow);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.1rem; color: var(--brown);
+    }
+    .testi-name { font-weight: 800; font-size: 0.95rem; }
+    .testi-loc { font-size: 0.78rem; opacity: 0.7; }
+    .testi-stars { color: var(--yellow); font-size: 0.88rem; }
+    .testi-text { font-size: 0.9rem; opacity: 0.9; line-height: 1.5; margin-top: 10px; }
+
+    /* ---- TERLARIS ---- */
+    .terlaris-section { background: #fff; }
+
+    /* ---- LOKASI ---- */
+    .lokasi-section { background: var(--cream); }
+    .lokasi-card {
+      background: #fff; border-radius: 20px; padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .lokasi-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+    .lokasi-icon { width: 44px; height: 44px; border-radius: 50%; background: var(--green); color: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
+    .lokasi-label { font-weight: 800; font-size: 0.9rem; color: var(--green-dark); }
+    .lokasi-value { font-size: 0.88rem; color: #555; }
+    .map-placeholder {
+      background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+      border-radius: 16px; height: 220px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 8px; color: var(--green-dark);
+    }
+
+    /* ---- TENTANG ---- */
+    .tentang-section { background: #fff; }
+    .tentang-img-wrap {
+      position: relative;
+    }
+    .tentang-img {
+      background: linear-gradient(135deg, #d1fae5, #6ee7b7);
+      border-radius: 20px; height: 320px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem;
+    }
+    .tentang-badge {
+      position: absolute; bottom: 20px; right: -10px;
+      background: var(--orange); color: #fff; border-radius: 14px;
+      padding: 14px 20px; text-align: center;
+      box-shadow: 0 4px 15px rgba(249,115,22,.4);
+    }
+    .tentang-badge-num { font-family: 'Baloo 2', cursive; font-size: 2.2rem; font-weight: 800; line-height: 1; }
+    .tentang-badge-label { font-size: 0.78rem; font-weight: 700; opacity: 0.9; }
+
+    /* ---- BONUS ---- */
+    .bonus-section {
+      background: linear-gradient(135deg, #fff7ed, #ffedd5);
+    }
+    .bonus-card {
+      background: #fff; border-radius: 18px; padding: 24px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.07); text-align: center;
+      border-bottom: 4px solid var(--orange);
+    }
+    .bonus-icon { font-size: 2.5rem; margin-bottom: 10px; }
+
+    /* ---- AREA PENGIRIMAN ---- */
+    .area-section { background: var(--cream); }
+    .area-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .area-chip {
+      background: #fff; border: 2px solid var(--green); color: var(--green-dark);
+      font-weight: 700; font-size: 0.85rem; padding: 6px 14px; border-radius: 50px;
+      display: flex; align-items: center; gap: 5px;
+    }
+
+    /* ---- CTA WA ---- */
+    .cta-wa {
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #fff; text-align: center; padding: 70px 20px;
+    }
+    .cta-wa h2 { font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 800; margin-bottom: 12px; }
+    .btn-wa-big {
+      background: #fff; color: #128c7e; font-weight: 800; font-size: 1.2rem;
+      border: none; border-radius: 50px; padding: 16px 44px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.15); transition: all .2s;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .btn-wa-big:hover { transform: translateY(-3px); box-shadow: 0 10px 35px rgba(0,0,0,0.2); color: #075e54; }
+
+    /* ---- FOOTER ---- */
+    footer {
+      background: var(--green-dark); color: rgba(255,255,255,0.85);
+      padding: 50px 0 20px;
+    }
+    footer h5 { color: #fff; font-weight: 800; margin-bottom: 16px; }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem; display: block; margin-bottom: 6px; }
+    footer a:hover { color: var(--yellow); }
+    .footer-brand { font-family: 'Baloo 2', cursive; font-size: 1.6rem; font-weight: 800; color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.15); margin-top: 30px; padding-top: 20px; text-align: center; font-size: 0.82rem; }
+
+    /* ---- WA FLOAT ---- */
+    .wa-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; font-size: 1.8rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,.5); text-decoration: none;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+    /* ---- COUNTDOWN ---- */
+    .countdown-wrap {
+      background: var(--red); color: #fff; border-radius: 14px; padding: 16px 20px;
+      display: inline-flex; align-items: center; gap: 14px; margin-top: 16px;
+    }
+    .countdown-label { font-weight: 700; font-size: 0.88rem; opacity: 0.9; }
+    .countdown-timer { display: flex; gap: 10px; }
+    .countdown-block { background: rgba(0,0,0,0.25); border-radius: 8px; padding: 6px 12px; text-align: center; }
+    .countdown-num { font-family: 'Baloo 2', cursive; font-size: 1.5rem; font-weight: 800; line-height: 1; }
+    .countdown-unit { font-size: 0.65rem; opacity: 0.8; font-weight: 700; }
+
+    /* ---- SCROLL ANIMATION ---- */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      .stat-item { border-right: none; border-bottom: 1px solid #eee; }
+      .hero { text-align: center; padding: 60px 0 40px; }
+      .hero-img { max-width: 260px; margin: 24px auto 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span><i class="fa fa-phone me-1"></i>+62 89526942476 &nbsp;|&nbsp; <i class="fa fa-clock me-1"></i>Buka: 07.00–21.00 WIB</span>
+    <span class="d-none d-md-block"><i class="fa fa-location-dot me-1"></i>Sumatera Utara – Gratis Ongkir Area Sekitar!</span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">🛒 SembaGO Mart</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span style="color:#fff;font-size:1.4rem"><i class="fa fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav me-auto ms-3 gap-1">
+        <li class="nav-item"><a class="nav-link" href="#katalog">Katalog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#paket">Paket</a></li>
+        <li class="nav-item"><a class="nav-link" href="#promo">Promo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lokasi">Lokasi</a></li>
+      </ul>
+      <a href="https://wa.me/6289526942476?text=Halo+SembaGO+Mart%2C+saya+mau+pesan+sembako" target="_blank" class="btn btn-wa-nav">
+        <i class="fab fa-whatsapp me-1"></i> Pesan via WA
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- PROMO TICKER -->
+<div class="promo-ticker">
+  <div class="ticker-content" id="ticker">
+    <span class="ticker-item">Diskon Minyak Goreng 10% hari ini!</span>
+    <span class="ticker-item">Beli Beras 10kg gratis mie instan 5 bungkus</span>
+    <span class="ticker-item">Stok terbatas! Segera pesan sebelum habis</span>
+    <span class="ticker-item">Gratis ongkir area Sumatera Utara & sekitarnya</span>
+    <span class="ticker-item">COD tersedia – bayar di tempat!</span>
+    <span class="ticker-item">Diskon Minyak Goreng 10% hari ini!</span>
+    <span class="ticker-item">Beli Beras 10kg gratis mie instan 5 bungkus</span>
+    <span class="ticker-item">Stok terbatas! Segera pesan sebelum habis</span>
+    <span class="ticker-item">Gratis ongkir area Sumatera Utara & sekitarnya</span>
+    <span class="ticker-item">COD tersedia – bayar di tempat!</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <span class="hero-badge">🔥 PROMO HARI INI – STOK TERBATAS!</span>
+        <h1>Sembako <span>Lengkap & Murah</span><br>Langsung ke Pintu Rumahmu!</h1>
+        <p class="mt-3 mb-2">Produk segar, harga hemat, gratis ongkir area Sumatera Utara.<br>Bisa COD – bayar saat barang sampai!</p>
+        <div class="countdown-wrap">
+          <div class="countdown-label">⏰ Promo berakhir dalam:</div>
+          <div class="countdown-timer">
+            <div class="countdown-block"><div class="countdown-num" id="jam">50</div><div class="countdown-unit">JAM</div></div>
+            <div class="countdown-block"><div class="countdown-num" id="menit">59</div><div class="countdown-unit">MENIT</div></div>
+            <div class="countdown-block"><div class="countdown-num" id="detik">60</div><div class="countdown-unit">DETIK</div></div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="https://wa.me/6289526942476?text=Halo+SembaGO+Mart%2C+saya+mau+pesan+sembako" target="_blank" class="btn-pesan">
+            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+          </a>
+          <a href="#katalog" class="btn-katalog">Lihat Katalog</a>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center mt-4 mt-lg-0">
+        <div style="font-size:10rem;line-height:1;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.3))">🛒</div>
+        <div class="mt-2" style="color:rgba(255,255,255,0.85);font-size:0.9rem;font-weight:700">
+          <span class="me-3">✓ Gratis Ongkir</span>
+          <span class="me-3">✓ Bisa COD</span>
+          <span>✓ Bisa Antar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-6 col-md-3 stat-item fade-in">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Pelanggan Setia</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item fade-in">
+        <div class="stat-num">100+</div>
+        <div class="stat-label">Produk Tersedia</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item fade-in">
+        <div class="stat-num">1</div>
+        <div class="stat-label">Tahun Berpengalaman</div>
+      </div>
+      <div class="col-6 col-md-3 stat-item fade-in">
+        <div class="stat-num">4.9</div>
+        <div class="stat-label">Rating Pelanggan</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROMO HARIAN -->
+<section class="promo-section py-5" id="promo">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="badge-section">🔥 PROMO SPESIAL</span>
+      <h2 class="section-title">Diskon Hari Ini – <span style="color:var(--orange)">Cepat Sebelum Habis!</span></h2>
+      <p class="section-subtitle">Harga spesial berlaku hari ini saja. Stok terbatas!</p>
+    </div>
+    <div class="row g-3">
+      <!-- Promo 1 -->
+      <div class="col-6 col-md-3 fade-in">
+        <div class="promo-card">
+          <span class="promo-badge-card">-15%</span>
+          <div style="background:linear-gradient(135deg,#fef9c3,#fef08a);height:180px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🛢️</div>
+          <div class="promo-card-body">
+            <div class="promo-card-name">Minyak Goreng 2L</div>
+            <div class="promo-price-old">Rp 38.000</div>
+            <div class="promo-price-new">Rp 32.000</div>
+            <div class="stok-badge">⚡ Stok terbatas!</div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Minyak+Goreng+2L+promo" target="_blank" class="btn-order-product mt-2 d-flex text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Promo 2 -->
+      <div class="col-6 col-md-3 fade-in">
+        <div class="promo-card">
+          <span class="promo-badge-card">-20%</span>
+          <div style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);height:180px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🌾</div>
+          <div class="promo-card-body">
+            <div class="promo-card-name">Beras Premium 5kg</div>
+            <div class="promo-price-old">Rp 75.000</div>
+            <div class="promo-price-new">Rp 60.000</div>
+            <div class="stok-badge">⚡ 20 karung tersisa!</div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Beras+5kg+promo" target="_blank" class="btn-order-product mt-2 d-flex text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Promo 3 -->
+      <div class="col-6 col-md-3 fade-in">
+        <div class="promo-card">
+          <span class="promo-badge-card">-10%</span>
+          <div style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);height:180px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🥚</div>
+          <div class="promo-card-body">
+            <div class="promo-card-name">Telur Ayam 1 Papan</div>
+            <div class="promo-price-old">Rp 62.000</div>
+            <div class="promo-price-new">Rp 56.000</div>
+            <div class="stok-badge">⚡ Promo sampai hari ini!</div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Telur+Ayam+1+Papan" target="_blank" class="btn-order-product mt-2 d-flex text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Promo 4 -->
+      <div class="col-6 col-md-3 fade-in">
+        <div class="promo-card">
+          <span class="promo-badge-card">-25%</span>
+          <div style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);height:180px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🍜</div>
+          <div class="promo-card-body">
+            <div class="promo-card-name">Mie Instan Karton</div>
+            <div class="promo-price-old">Rp 105.000</div>
+            <div class="promo-price-new">Rp 79.000</div>
+            <div class="stok-badge">⚡ Tinggal 5 karton!</div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Mie+Instan+Karton" target="_blank" class="btn-order-product mt-2 d-flex text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUK TERLARIS -->
+<section class="terlaris-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="badge-section">⭐ PALING LAKU</span>
+      <h2 class="section-title">Produk <span style="color:var(--orange)">Terlaris</span> Kami</h2>
+      <p class="section-subtitle">Pilihan favorit ratusan pelanggan setia SembaGO Mart</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-2 fade-in" style="text-align:center">
+        <div style="background:#fff;border-radius:16px;padding:20px 10px;box-shadow:0 3px 15px rgba(0,0,0,0.07)">
+          <div style="font-size:3rem">🌾</div>
+          <div style="font-weight:800;font-size:0.9rem;margin-top:8px">Beras</div>
+          <div style="font-size:0.78rem;color:#888">5kg / 10kg</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 fade-in" style="text-align:center">
+        <div style="background:#fff;border-radius:16px;padding:20px 10px;box-shadow:0 3px 15px rgba(0,0,0,0.07)">
+          <div style="font-size:3rem">🛢️</div>
+          <div style="font-weight:800;font-size:0.9rem;margin-top:8px">Minyak Goreng</div>
+          <div style="font-size:0.78rem;color:#888">1L / 2L</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 fade-in" style="text-align:center">
+        <div style="background:#fff;border-radius:16px;padding:20px 10px;box-shadow:0 3px 15px rgba(0,0,0,0.07)">
+          <div style="font-size:3rem">🥚</div>
+          <div style="font-weight:800;font-size:0.9rem;margin-top:8px">Telur Ayam</div>
+          <div style="font-size:0.78rem;color:#888">1 papan / kg</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 fade-in" style="text-align:center">
+        <div style="background:#fff;border-radius:16px;padding:20px 10px;box-shadow:0 3px 15px rgba(0,0,0,0.07)">
+          <div style="font-size:3rem">🍜</div>
+          <div style="font-weight:800;font-size:0.9rem;margin-top:8px">Mie Instan</div>
+          <div style="font-size:0.78rem;color:#888">per bungkus / karton</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 fade-in" style="text-align:center">
+        <div style="background:#fff;border-radius:16px;padding:20px 10px;box-shadow:0 3px 15px rgba(0,0,0,0.07)">
+          <div style="font-size:3rem">🍬</div>
+          <div style="font-weight:800;font-size:0.9rem;margin-top:8px">Gula Pasir</div>
+          <div style="font-size:0.78rem;color:#888">1kg / 5kg</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 fade-in" style="text-align:center">
+        <div style="background:#fff;border-radius:16px;padding:20px 10px;box-shadow:0 3px 15px rgba(0,0,0,0.07)">
+          <div style="font-size:3rem">🧴</div>
+          <div style="font-weight:800;font-size:0.9rem;margin-top:8px">Sabun Mandi</div>
+          <div style="font-size:0.78rem;color:#888">batang / cair</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KATALOG LENGKAP -->
+<section class="katalog-section py-5" id="katalog">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="badge-section">📦 KATALOG</span>
+      <h2 class="section-title">Katalog Produk <span style="color:var(--green)">Lengkap</span></h2>
+      <p class="section-subtitle">Semua kebutuhan dapur & rumah tangga tersedia di SembaGO Mart</p>
+    </div>
+    <!-- Filter -->
+    <div class="filter-btns text-center mb-4">
+      <button class="btn btn-outline-success active" onclick="filterKatalog('semua',this)">Semua</button>
+      <button class="btn btn-outline-success" onclick="filterKatalog('beras',this)">Beras & Sereal</button>
+      <button class="btn btn-outline-success" onclick="filterKatalog('minyak',this)">Minyak & Lemak</button>
+      <button class="btn btn-outline-success" onclick="filterKatalog('bumbu',this)">Bumbu & Rempah</button>
+      <button class="btn btn-outline-success" onclick="filterKatalog('minuman',this)">Minuman</button>
+      <button class="btn btn-outline-success" onclick="filterKatalog('kebersihan',this)">Kebersihan</button>
+    </div>
+    <div class="row g-3" id="katalog-grid">
+      <!-- PRODUK 1 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="beras">
+        <div class="product-card">
+          <span class="label-terlaris">🔥 Terlaris</span>
+          <div style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🌾</div>
+          <div class="product-card-body">
+            <div class="product-name">Beras Premium Pulen</div>
+            <div class="product-desc">Beras putih pulen kualitas terbaik, cocok untuk keluarga</div>
+            <div class="product-price">Rp 12.000 <span class="product-unit">/kg</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Beras+Premium+Pulen" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 2 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="beras">
+        <div class="product-card">
+          <div style="background:linear-gradient(135deg,#fef9c3,#fef08a);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🌽</div>
+          <div class="product-card-body">
+            <div class="product-name">Beras Merah Organik</div>
+            <div class="product-desc">Lebih sehat, cocok untuk diet dan hidup sehat</div>
+            <div class="product-price">Rp 16.000 <span class="product-unit">/kg</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Beras+Merah+Organik" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 3 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="minyak">
+        <div class="product-card">
+          <span class="label-terlaris">🔥 Terlaris</span>
+          <div style="background:linear-gradient(135deg,#fef3c7,#fde68a);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🛢️</div>
+          <div class="product-card-body">
+            <div class="product-name">Minyak Goreng 1L</div>
+            <div class="product-desc">Minyak goreng jernih, bebas kolesterol, untuk memasak sehari-hari</div>
+            <div class="product-price">Rp 19.000 <span class="product-unit">/botol</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Minyak+Goreng+1L" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 4 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="minyak">
+        <div class="product-card">
+          <div style="background:linear-gradient(135deg,#fff7ed,#ffedd5);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🫙</div>
+          <div class="product-card-body">
+            <div class="product-name">Minyak Goreng 2L</div>
+            <div class="product-desc">Kemasan besar, lebih hemat untuk keluarga besar</div>
+            <div class="product-price">Rp 34.000 <span class="product-unit">/botol</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Minyak+Goreng+2L" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 5 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="bumbu">
+        <div class="product-card">
+          <div style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🧅</div>
+          <div class="product-card-body">
+            <div class="product-name">Gula Pasir 1kg</div>
+            <div class="product-desc">Gula putih bersih, manis alami untuk minuman & masakan</div>
+            <div class="product-price">Rp 14.500 <span class="product-unit">/kg</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Gula+Pasir+1kg" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 6 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="bumbu">
+        <div class="product-card">
+          <div style="background:linear-gradient(135deg,#fef3c7,#fde68a);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🧂</div>
+          <div class="product-card-body">
+            <div class="product-name">Garam Beryodium 250g</div>
+            <div class="product-desc">Garam dapur bersih dengan kandungan yodium yang cukup</div>
+            <div class="product-price">Rp 3.500 <span class="product-unit">/bungkus</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Garam+Beryodium" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 7 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="bumbu">
+        <div class="product-card">
+          <span class="label-terlaris">🔥 Terlaris</span>
+          <div style="background:linear-gradient(135deg,#fee2e2,#fecaca);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🌶️</div>
+          <div class="product-card-body">
+            <div class="product-name">Cabai Merah Kering</div>
+            <div class="product-desc">Cabai merah kering pilihan, pedas segar untuk masakan</div>
+            <div class="product-price">Rp 8.000 <span class="product-unit">/100g</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Cabai+Merah+Kering" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 8 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="bumbu">
+        <div class="product-card">
+          <div style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🧄</div>
+          <div class="product-card-body">
+            <div class="product-name">Bawang Merah</div>
+            <div class="product-desc">Bawang merah segar pilihan, aroma khas untuk masakan Indonesia</div>
+            <div class="product-price">Rp 25.000 <span class="product-unit">/kg</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Bawang+Merah" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 9 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="minuman">
+        <div class="product-card">
+          <span class="label-baru">✨ Baru</span>
+          <div style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">☕</div>
+          <div class="product-card-body">
+            <div class="product-name">Kopi Sachet (Box)</div>
+            <div class="product-desc">Kopi instan renceng, cocok buat kos-kosan atau kantor</div>
+            <div class="product-price">Rp 22.000 <span class="product-unit">/box</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Kopi+Sachet+Box" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 10 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="minuman">
+        <div class="product-card">
+          <div style="background:linear-gradient(135deg,#fce7f3,#fbcfe8);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🧃</div>
+          <div class="product-card-body">
+            <div class="product-name">Teh Celup (Box 25)</div>
+            <div class="product-desc">Teh wangi asli pilihan, nikmat hangat di pagi hari</div>
+            <div class="product-price">Rp 8.500 <span class="product-unit">/box</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Teh+Celup+Box" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 11 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="kebersihan">
+        <div class="product-card">
+          <div style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🧴</div>
+          <div class="product-card-body">
+            <div class="product-name">Sabun Cuci Piring</div>
+            <div class="product-desc">Pembersih piring efektif, busa banyak, aroma segar</div>
+            <div class="product-price">Rp 7.000 <span class="product-unit">/botol</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Sabun+Cuci+Piring" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- PRODUK 12 -->
+      <div class="col-6 col-md-3 fade-in product-item" data-cat="kebersihan">
+        <div class="product-card">
+          <div style="background:linear-gradient(135deg,#e0f2fe,#bae6fd);height:170px;display:flex;align-items:center;justify-content:center;font-size:5rem;">🧹</div>
+          <div class="product-card-body">
+            <div class="product-name">Detergen Bubuk 1kg</div>
+            <div class="product-desc">Detergen ampuh untuk cucian tangan & mesin cuci</div>
+            <div class="product-price">Rp 18.000 <span class="product-unit">/kg</span></div>
+            <a href="https://wa.me/6289526942476?text=Halo%2C+saya+mau+pesan+Detergen+Bubuk+1kg" target="_blank" class="btn-order-product text-white text-decoration-none">
+              <i class="fab fa-whatsapp"></i> Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAKET SEMBAKO -->
+<section class="paket-section py-5" id="paket">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge-section">🎁 PAKET HEMAT</span>
+      <h2 class="section-title">Paket Sembako <span style="color:var(--orange)">Spesial</span></h2>
+      <p class="section-subtitle">Hemat lebih banyak dengan paket lengkap pilihan kami!</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <!-- Paket Anak Kos -->
+      <div class="col-md-4 fade-in">
+        <div class="paket-card h-100">
+          <div class="paket-header">
+            <div class="paket-icon">🏠</div>
+            <div class="paket-name">Paket Anak Kos</div>
+            <div style="font-size:0.88rem;color:#666;margin-bottom:8px">Praktis & Ekonomis</div>
+            <div class="badge-hemat">💰 Hemat 15%</div><br>
+            <div class="paket-price">Rp 85.000</div>
+            <div style="font-size:0.78rem;color:#999;text-decoration:line-through">Rp 100.000</div>
+          </div>
+          <ul class="paket-isi list-unstyled">
+            <li><i class="fa fa-check-circle"></i>Beras 2kg</li>
+            <li><i class="fa fa-check-circle"></i>Mie Instan 10 bungkus</li>
+            <li><i class="fa fa-check-circle"></i>Minyak Goreng 1L</li>
+            <li><i class="fa fa-check-circle"></i>Gula Pasir 500g</li>
+            <li><i class="fa fa-check-circle"></i>Kopi Sachet 1 renceng</li>
+            <li><i class="fa fa-check-circle"></i>Sabun Mandi 2 batang</li>
+          </ul>
+          <div class="paket-footer">
+            <a href="https://wa.me/6289526942476?text=Halo+BerkahMart%2C+saya+mau+pesan+Paket+Anak+Kos" target="_blank" class="btn-order-product text-white text-decoration-none w-100">
+              <i class="fab fa-whatsapp"></i> Pesan Paket Ini
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Paket Keluarga -->
+      <div class="col-md-4 fade-in">
+        <div class="paket-card featured h-100">
+          <div class="paket-header">
+            <div class="paket-icon">👨‍👩‍👧‍👦</div>
+            <div class="paket-name">Paket Keluarga Hemat</div>
+            <div style="font-size:0.88rem;color:#666;margin-bottom:8px">Pilihan Terbaik Keluarga</div>
+            <span class="popular-badge">⭐ PALING POPULER</span><br>
+            <div class="paket-price">Rp 185.000</div>
+            <div style="font-size:0.78rem;color:#999;text-decoration:line-through">Rp 225.000</div>
+          </div>
+          <ul class="paket-isi list-unstyled">
+            <li><i class="fa fa-check-circle"></i>Beras 5kg Premium</li>
+            <li><i class="fa fa-check-circle"></i>Minyak Goreng 2L</li>
+            <li><i class="fa fa-check-circle"></i>Gula Pasir 1kg</li>
+            <li><i class="fa fa-check-circle"></i>Telur Ayam ½ papan</li>
+            <li><i class="fa fa-check-circle"></i>Mie Instan 1 karton</li>
+            <li><i class="fa fa-check-circle"></i>Garam + Kecap</li>
+            <li><i class="fa fa-check-circle"></i>Sabun & Detergen</li>
+          </ul>
+          <div class="paket-footer">
+            <a href="https://wa.me/6289526942476?text=Halo+BerkahMart%2C+saya+mau+pesan+Paket+Keluarga+Hemat" target="_blank" class="btn-order-product text-white text-decoration-none w-100" style="background:var(--orange)">
+              <i class="fab fa-whatsapp"></i> Pesan Paket Ini
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Paket Bulanan -->
+      <div class="col-md-4 fade-in">
+        <div class="paket-card h-100">
+          <div class="paket-header">
+            <div class="paket-icon">📅</div>
+            <div class="paket-name">Paket Bulanan</div>
+            <div style="font-size:0.88rem;color:#666;margin-bottom:8px">Stok Sebulan Penuh!</div>
+            <div class="badge-hemat">💰 Hemat 20%</div><br>
+            <div class="paket-price">Rp 450.000</div>
+            <div style="font-size:0.78rem;color:#999;text-decoration:line-through">Rp 565.000</div>
+          </div>
+          <ul class="paket-isi list-unstyled">
+            <li><i class="fa fa-check-circle"></i>Beras 10kg Premium</li>
+            <li><i class="fa fa-check-circle"></i>Minyak Goreng 2L x2</li>
+            <li><i class="fa fa-check-circle"></i>Gula 2kg + Garam 2 pak</li>
+            <li><i class="fa fa-check-circle"></i>Telur Ayam 1 papan</li>
+            <li><i class="fa fa-check-circle"></i>Mie Instan 2 karton</li>
+            <li><i class="fa fa-check-circle"></i>Bumbu lengkap sebulan</li>
+            <li><i class="fa fa-check-circle"></i>Perlengkapan kebersihan</li>
+          </ul>
+          <div class="paket-footer">
+            <a href="https://wa.me/6289526942476?text=Halo+BerkahMart%2C+saya+mau+pesan+Paket+Bulanan" target="_blank" class="btn-order-product text-white text-decoration-none w-100">
+              <i class="fab fa-whatsapp"></i> Pesan Paket Ini
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS SECTION -->
+<section class="bonus-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="badge-section">🎁 BONUS SPESIAL</span>
+      <h2 class="section-title">Keuntungan Belanja di <span style="color:var(--orange)">SembaGO Mart</span></h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-3 fade-in">
+        <div class="bonus-card">
+          <div class="bonus-icon">🎁</div>
+          <div style="font-weight:800;font-size:0.95rem;color:var(--brown)">Beli ≥ Rp100rb</div>
+          <div style="font-size:0.85rem;color:#666;margin-top:6px">Gratis mie instan 5 bungkus!</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 fade-in">
+        <div class="bonus-card">
+          <div class="bonus-icon">💝</div>
+          <div style="font-weight:800;font-size:0.95rem;color:var(--brown)">Pembeli Baru</div>
+          <div style="font-size:0.85rem;color:#666;margin-top:6px">Diskon 10% pembelian pertama!</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 fade-in">
+        <div class="bonus-card">
+          <div class="bonus-icon">🔄</div>
+          <div style="font-weight:800;font-size:0.95rem;color:var(--brown)">Langganan Bulanan</div>
+          <div style="font-size:0.85rem;color:#666;margin-top:6px">Harga khusus</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 fade-in">
+        <div class="bonus-card">
+          <div class="bonus-icon">📦</div>
+          <div style="font-weight:800;font-size:0.95rem;color:var(--brown)">Beli Paket Bulanan</div>
+          <div style="font-size:0.85rem;color:#666;margin-top:6px">Gratis ongkir se-Sumatra Utara!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section class="keunggulan-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="badge-section">⭐ KEUNGGULAN KAMI</span>
+      <h2 class="section-title">Kenapa Pilih <span style="color:var(--green)">SembaGO Mart?</span></h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-4 fade-in">
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">🚚</div>
+          <div class="keunggulan-title">Bisa Antar ke Rumah</div>
+          <div class="keunggulan-desc">Gratis ongkir untuk area Sumatera Utara & sekitarnya. Pengiriman cepat 1 hari!</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 fade-in">
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">💰</div>
+          <div class="keunggulan-title">Harga Paling Murah</div>
+          <div class="keunggulan-desc">Harga grosir untuk semua pelanggan. Dijamin lebih hemat dari toko sebelah!</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 fade-in">
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">🤝</div>
+          <div class="keunggulan-title">Bisa COD</div>
+          <div class="keunggulan-desc">Bayar saat barang sampai di tangan Anda. Aman dan terpercaya!</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 fade-in">
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">✅</div>
+          <div class="keunggulan-title">Produk Terjamin Kualitas</div>
+          <div class="keunggulan-desc">Semua produk pilihan, segar, dan berstandar kualitas tinggi</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 fade-in">
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">⚡</div>
+          <div class="keunggulan-title">Pesan Cepat via WA</div>
+          <div class="keunggulan-desc">Tinggal klik tombol WhatsApp, langsung diproses! Praktis, mudah, cepat.</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 fade-in">
+        <div class="keunggulan-card">
+          <div class="keunggulan-icon">📱</div>
+          <div class="keunggulan-title">Respon Cepat 24 Jam</div>
+          <div class="keunggulan-desc">Tim kami siap melayani pertanyaan dan pesanan Anda setiap hari</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA PENGIRIMAN -->
+<section class="area-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="badge-section">📍 AREA LAYANAN</span>
+      <h2 class="section-title">Area <span style="color:var(--green)">Pengiriman</span> Gratis</h2>
+      <p class="section-subtitle">Gratis ongkir untuk wilayah Sumatera Utara dan sekitarnya</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div style="background:#fff;border-radius:20px;padding:30px;box-shadow:0 3px 15px rgba(0,0,0,0.07)">
+          <div class="area-chips justify-content-center">
+            <span class="area-chip"><i class="fa fa-location-dot"></i> Medan</span>
+            <span class="area-chip"><i class="fa fa-location-dot"></i> Deli Serdang</span>
+            <span class="area-chip"><i class="fa fa-location-dot"></i> Binjai</span>
+            <span class="area-chip"><i class="fa fa-location-dot"></i> Langkat</span>
+            <span class="area-chip"><i class="fa fa-location-dot"></i> Serdang Bedagai</span>
+            <span class="area-chip"><i class="fa fa-location-dot"></i> Tebing Tinggi</span>
+            <span class="area-chip"><i class="fa fa-location-dot"></i> Pematang Siantar</span>
+            <span class="area-chip"><i class="fa fa-location-dot"></i> Karo</span>
+            <span class="area-chip"><i class="fa fa-location-dot"></i> Asahan</span>
+            <span class="area-chip"><i class="fa fa-location-dot"></i> & Area Sekitarnya</span>
+          </div>
+          <div class="text-center mt-4" style="font-size:0.9rem;color:#666">
+            <i class="fa fa-info-circle text-success me-1"></i>
+            Untuk area di luar daftar, silakan hubungi kami untuk konfirmasi ongkir
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section class="testimoni-section py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span style="display:inline-block;background:rgba(255,255,255,0.2);color:#fff;font-size:0.78rem;font-weight:800;padding:3px 12px;border-radius:50px;margin-bottom:8px">💬 TESTIMONI</span>
+      <h2 class="section-title" style="color:#fff">Kata Pelanggan <span style="color:var(--yellow)">Kami</span></h2>
+      <p style="color:rgba(255,255,255,0.7)">Sudah dipercaya ratusan keluarga di Sumatera Utara</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-4 fade-in">
+        <div class="testi-card">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="testi-avatar">SR</div>
+            <div>
+              <div class="testi-name">Sari Rahayu</div>
+              <div class="testi-loc">📍 Medan</div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="testi-text">"Barang cepat sampai, harga murah banget. Udah langganan tiap bulan. Paling suka paket keluarga, hemat banget!"</div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="testi-card">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="testi-avatar">BH</div>
+            <div>
+              <div class="testi-name">Budi Hartono</div>
+              <div class="testi-loc">📍 Deli Serdang</div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="testi-text">"COD-nya enak, bayar waktu barang udah di tangan. Respon WhatsApp cepat juga, nggak lama nunggu balasan."</div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="testi-card">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="testi-avatar">DN</div>
+            <div>
+              <div class="testi-name">Dewi Nasution</div>
+              <div class="testi-loc">📍 Binjai</div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="testi-text">"Paket anak kos cocok banget buat anak saya di Medan. Lengkap isinya, harga terjangkau, gratis ongkir pula!"</div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="testi-card">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="testi-avatar">AL</div>
+            <div>
+              <div class="testi-name">Ahmad Lubis</div>
+              <div class="testi-loc">📍 Tebing Tinggi</div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="testi-text">"Produknya lengkap, semua kebutuhan dapur ada. Nggak perlu keluar rumah lagi, tinggal order WA langsung diantar."</div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="testi-card">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="testi-avatar">RP</div>
+            <div>
+              <div class="testi-name">Rina Purba</div>
+              <div class="testi-loc">📍 Pematang Siantar</div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="testi-text">"Udah 1 tahun lebih jadi pelanggan. Kualitas beras bagus banget, nggak pernah kecewa. Harga stabil pula!"</div>
+        </div>
+      </div>
+      <div class="col-md-4 fade-in">
+        <div class="testi-card">
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <div class="testi-avatar">MS</div>
+            <div>
+              <div class="testi-name">Muhammad Sinaga</div>
+              <div class="testi-loc">📍 Langkat</div>
+              <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="testi-text">"Promo diskonnnya beneran ada! Kemarin dapat minyak goreng murah + bonus mie instan. Recommended banget!"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TENTANG TOKO -->
+<section class="tentang-section py-5" id="tentang">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-5 fade-in">
+        <div class="tentang-img-wrap">
+          <div class="tentang-img">🏪</div>
+          <div class="tentang-badge">
+            <div class="tentang-badge-num">1+</div>
+            <div class="tentang-badge-label">TAHUN BERPENGALAMAN</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 fade-in">
+        <span class="badge-section">🏪 TENTANG KAMI</span>
+        <h2 class="section-title mt-2">SembaGO Mart – <span style="color:var(--green)">Toko Sembako Terpercaya</span> Sejak 2025</h2>
+        <p class="mt-3" style="color:#555;line-height:1.8;">
+          <strong>SembaGO Mart</strong> adalah toko sembako yang telah melayani kebutuhan keluarga di Sumatera Utara. Kami hadir dengan misi sederhana: menghadirkan sembako berkualitas dengan harga terjangkau langsung ke pintu rumah Anda.
+        </p>
+        <p style="color:#555;line-height:1.8;margin-top:12px;">
+          Mulai dari kebutuhan dapur sehari-hari hingga paket bulanan yang komplit, SembaGO Mart siap menjadi mitra belanja terpercaya Anda. Dengan sistem pemesanan mudah via WhatsApp, proses belanja jadi lebih praktis dan menyenangkan.
+        </p>
+        <div class="row g-3 mt-3">
+          <div class="col-6">
+            <div style="background:#f0fdf4;border-radius:12px;padding:16px;border-left:4px solid var(--green)">
+              <div style="font-weight:800;color:var(--green-dark)">✓ Produk Lengkap</div>
+              <div style="font-size:0.82rem;color:#666;margin-top:4px">100+ jenis produk tersedia</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="background:#fff7ed;border-radius:12px;padding:16px;border-left:4px solid var(--orange)">
+              <div style="font-weight:800;color:var(--orange-dark)">✓ Harga Transparan</div>
+              <div style="font-size:0.82rem;color:#666;margin-top:4px">Harga jelas, tanpa biaya tersembunyi</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="background:#eff6ff;border-radius:12px;padding:16px;border-left:4px solid #3b82f6">
+              <div style="font-weight:800;color:#1d4ed8">✓ Pengiriman Cepat</div>
+              <div style="font-size:0.82rem;color:#666;margin-top:4px">Estimasi 1 hari sampai</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="background:#fdf4ff;border-radius:12px;padding:16px;border-left:4px solid #a855f7">
+              <div style="font-weight:800;color:#7e22ce">✓ 500+ Pelanggan</div>
+              <div style="font-size:0.82rem;color:#666;margin-top:4px">Dipercaya ratusan keluarga</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOKASI -->
+<section class="lokasi-section py-5" id="lokasi">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="badge-section">📍 LOKASI TOKO</span>
+      <h2 class="section-title">Temukan <span style="color:var(--green)">SembaGO Mart</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-5 fade-in">
+        <div class="lokasi-card">
+          <div class="lokasi-item">
+            <div class="lokasi-icon"><i class="fa fa-location-dot"></i></div>
+            <div>
+              <div class="lokasi-label">Alamat Toko</div>
+              <div class="lokasi-value">Jl. Sembako Jaya No. 12, Sumatera Utara</div>
+            </div>
+          </div>
+          <div class="lokasi-item">
+            <div class="lokasi-icon"><i class="fa fa-clock"></i></div>
+            <div>
+              <div class="lokasi-label">Jam Operasional</div>
+              <div class="lokasi-value">Senin – Minggu, 07.00 – 21.00 WIB</div>
+            </div>
+          </div>
+          <div class="lokasi-item">
+            <div class="lokasi-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <div class="lokasi-label">WhatsApp / Telepon</div>
+              <div class="lokasi-value">+62 89526942476</div>
+            </div>
+          </div>
+          <div class="lokasi-item">
+            <div class="lokasi-icon"><i class="fa fa-truck"></i></div>
+            <div>
+              <div class="lokasi-label">Area Pengiriman</div>
+              <div class="lokasi-value">Seluruh Sumatera Utara & sekitarnya</div>
+            </div>
+          </div>
+          <a href="https://wa.me/6289526942476?text=Halo+SembaGO+Mart%2C+saya+mau+pesan+sembako" target="_blank" class="btn-order-product text-white text-decoration-none w-100 mt-2">
+            <i class="fab fa-whatsapp"></i> Chat & Pesan Sekarang
+          </a>
+        </div>
+      </div>
+      <div class="col-md-7 fade-in">
+        <div class="map-placeholder">
+          <div style="font-size:3.5rem">🗺️</div>
+          <div style="font-weight:800;font-size:1.1rem;color:var(--green-dark)">Sumatera Utara</div>
+          <div style="font-size:0.88rem;color:#555">Melayani seluruh wilayah Sumatera Utara</div>
+          <a href="https://maps.google.com" target="_blank" style="background:var(--green);color:#fff;padding:10px 24px;border-radius:50px;font-weight:800;font-size:0.9rem;text-decoration:none;margin-top:8px">
+            <i class="fa fa-map-marker me-1"></i> Buka Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA WHATSAPP -->
+<section class="cta-wa">
+  <div class="container">
+    <h2>Siap Pesan? <br>Langsung Chat Kami di WhatsApp!</h2>
+    <p style="opacity:0.85;font-size:1.05rem;margin-bottom:28px">Cukup klik tombol di bawah – chat langsung tersambung ke toko kami.<br>Stok terbatas, pesan sekarang sebelum habis!</p>
+    <a href="https://wa.me/6289526942476?text=Halo+SembaGO+Mart%2C+saya+mau+pesan+sembako" target="_blank" class="btn-wa-big">
+      <i class="fab fa-whatsapp" style="font-size:1.5rem"></i> Pesan Sekarang via WhatsApp
+    </a>
+    <div class="mt-4" style="font-size:0.88rem;opacity:0.75">
+      <span class="me-3">✓ Respon dalam 5 menit</span>
+      <span class="me-3">✓ Gratis ongkir area Sumut</span>
+      <span>✓ Bisa COD</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="footer-brand">🛒 SembaGO Mart</div>
+        <p style="font-size:0.88rem;margin-top:10px;opacity:0.75;line-height:1.6">
+          Toko sembako terpercaya di Sumatera Utara. Produk lengkap, harga hemat, pengiriman cepat. Melayani sejak 2025.
+        </p>
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" style="color:#25d366;font-size:1.5rem"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" style="color:#e4405f;font-size:1.5rem"><i class="fab fa-instagram"></i></a>
+          <a href="#" style="color:#1877f2;font-size:1.5rem"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="col-md-2 col-6">
+        <h5>Menu</h5>
+        <a href="#katalog">Katalog Produk</a>
+        <a href="#paket">Paket Sembako</a>
+        <a href="#promo">Promo Harian</a>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#lokasi">Lokasi</a>
+      </div>
+      <div class="col-md-3 col-6">
+        <h5>Produk Populer</h5>
+        <a href="#">Beras Premium</a>
+        <a href="#">Minyak Goreng</a>
+        <a href="#">Telur Ayam</a>
+        <a href="#">Mie Instan</a>
+        <a href="#">Paket Keluarga</a>
+      </div>
+      <div class="col-md-3">
+        <h5>Kontak</h5>
+        <a href="#"><i class="fa fa-location-dot me-2"></i>Sumatera Utara</a>
+        <a href="https://wa.me/6289526942476"><i class="fab fa-whatsapp me-2"></i>+62 89526942476</a>
+        <a href="#"><i class="fa fa-clock me-2"></i>Buka 07.00–21.00 WIB</a>
+        <div class="mt-3">
+          <a href="https://wa.me/6289526942476?text=Halo+SembaGO+Mart%2C+saya+mau+pesan+sembako" target="_blank" style="background:#25d366;color:#fff;padding:10px 20px;border-radius:50px;font-weight:800;font-size:0.88rem;text-decoration:none;display:inline-block">
+            <i class="fab fa-whatsapp me-1"></i> Pesan Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 SembaGO Mart – Sembako Lengkap Sumatera Utara.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/6289526942476?text=Halo+SembaGO+Mart%2C+saya+mau+pesan+sembako" target="_blank" class="wa-float" title="Chat WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
